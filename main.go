@@ -2,10 +2,12 @@ package main
 
 import (
 	"net/http"
+	"portfolio/config"
 	"portfolio/routes"
 )
 
 func main() {
 	routes.LoadRoutes()
-	http.ListenAndServe(":8000", nil)
+	port := config.GetPort()
+	http.ListenAndServe(":"+port, nil)
 }
