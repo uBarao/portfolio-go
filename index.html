@@ -54,40 +54,73 @@
     <section class="projects">
         <h2 class="projects__title">Projetos</h2>
         <ul class="projects__list">
-            {{range .}}
+
             <li class="project-card">
                 <div class="project-image-container">
-                    <img src="/static/images/project-portfolio.png" alt={{.Name}} class="project-image">
+                    <img src="/static/images/project-portfolio.png" alt="Project Image" class="project-image">
                 </div>
                 <div class="project-text">
-                    <h4 class="project-name">{{.Name}}</h4>
-                    <p class="project-summary">{{.Summary}}</p>
+                    <h4 class="project-name">Project Name</h4>
+                    <p class="project-summary">Project Summary</p>
                     <ul class="project-technologies">
-                        {{range .Technologies}}
-                        <li class="project-technologies__element">{{.}}</li>
-                        {{end}}
+                        <li class="project-technologies__element">Tech1</li>
+                        <li class="project-technologies__element">Tech2</li>
+                        <li class="project-technologies__element">Tech3</li>
                     </ul>
                 </div>
                 <div class="project-hover-card">
                     <div class="project-hover-card__image-container">
-                        <img src="/static/images/project-portfolio.png" alt={{.Name}} class="project-hover-card__image">
+                        <img src="/static/images/project-portfolio.png" alt="Project Image" class="project-hover-card__image">
                     </div>
                     <div class="project-hover-card__line"></div>
                     <div class="project-hover-card__text">
-                        <h4 class="project-hover-card__name">{{.Name}}</h4>
-                        <p class="project-hover-card__description">{{.Description}}</p>
+                        <h4 class="project-hover-card__name">Project Name</h4>
+                        <p class="project-hover-card__description">Project Description</p>
                         <div class="project-hover-card__technologies">
                             <h5 class="project-hover-card__technologies__title">Tecnologias Usadas:</h5>
                             <ul class="project-hover-card__technologies__list">
-                                {{range .Technologies}}
-                                <li class="project-hover-card__technologies__list__element"><strong>{{.}}</strong></li>
-                                {{end}}
+                                <li class="project-hover-card__technologies__list__element"><strong>Tech1</strong></li>
+                                <li class="project-hover-card__technologies__list__element"><strong>Tech2</strong></li>
+                                <li class="project-hover-card__technologies__list__element"><strong>Tech3</strong></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </li>
-            {{end}}
+
+            <li class="project-card">
+                <div class="project-image-container">
+                    <img src="/static/images/project-portfolio.png" alt="Project Image" class="project-image">
+                </div>
+                <div class="project-text">
+                    <h4 class="project-name">Project Name</h4>
+                    <p class="project-summary">Project Summary</p>
+                    <ul class="project-technologies">
+                        <li class="project-technologies__element">Tech1</li>
+                        <li class="project-technologies__element">Tech2</li>
+                        <li class="project-technologies__element">Tech3</li>
+                    </ul>
+                </div>
+                <div class="project-hover-card">
+                    <div class="project-hover-card__image-container">
+                        <img src="/static/images/project-portfolio.png" alt="Project Image" class="project-hover-card__image">
+                    </div>
+                    <div class="project-hover-card__line"></div>
+                    <div class="project-hover-card__text">
+                        <h4 class="project-hover-card__name">Project Name</h4>
+                        <p class="project-hover-card__description">Project Description</p>
+                        <div class="project-hover-card__technologies">
+                            <h5 class="project-hover-card__technologies__title">Tecnologias Usadas:</h5>
+                            <ul class="project-hover-card__technologies__list">
+                                <li class="project-hover-card__technologies__list__element"><strong>Tech1</strong></li>
+                                <li class="project-hover-card__technologies__list__element"><strong>Tech2</strong></li>
+                                <li class="project-hover-card__technologies__list__element"><strong>Tech3</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
         </ul>
     </section>
 
