@@ -6,136 +6,113 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="/static/css/style.css">
-    <title>My Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.png">
+    <title>Robson Uszacki</title>
 </head>
 <body>
     <main class="presentation">
         <section class="presentation__text">
             <h1 class="presentation__title">Robson Uszacki</h1>
             <p class="presentation__area-of-interest">Desenvolvedor Web e Back-end</p>
-            <p class="presentation__description">Descripção que você vai gostar muito. Muito completa e que diz coisas profundas.</p>
+            <p class="presentation__description">
+                Estudante de Ciência da Computação e apaixonado por tecnologia, desde cedo criando e implementando alguma ideia fora da caixa.
+                Aprendendo programação bem antes de ser popular e já obstinado a aprender mais e mais.
+            </p>
             <div class="presentation__links">
-                <a href="" class="presentation__links__image">
-                    <img src="" alt="">
+                <a href="https://github.com/uBarao" class="presentation__links__icon">
+                    <img src="/static/images/icon-github.png" alt="Github Icon" class="presentation__links__image">
+                </a>
+                <a href="https://www.linkedin.com/in/robson-uszacki/" class="presentation__links__icon">
+                    <img src="/static/images/icon-linkedin.png" alt="Linkedin Icon" class="presentation__links__image">
                 </a>
             </div>
         </section>
-        <img src="/static/images/Robson.jpg" alt="Foto de Robson" class="presentation__image">
+        <div class="presentation__image-container">
+            <img src="/static/images/robson_square.jpg" alt="Foto de Robson" class="presentation__image">
+            <div class="presentation__image-frame"></div>
+        </div>
     </main>
 
-    <section class="about">
-        <h2 class="about__title">Sobre Mim</h2>
-        <div class="about__description">
-            <p>Descrição Minha, falando coisas incrivel.</p>
-            <p>E com fatos malucos.</p>
+    <section class="info">
+        <div class="info__about">
+            <h2 class="info__title">Sobre Mim</h2>
+            <div class="info__description">
+                <p>Tenho paixão por buscar soluções, encontrar as estratégias mais eficientes para uma aplicação e explorar novas ideias de implementação. Acredito no meu potencial para contribuir de forma significativa, trazendo inovação e qualidade para os projetos em que atuo.</p>
+                <p>Desde novo eu criava alguns sistemas de luzes e outras coisas pra mim e pros meus amigos, sempre tive fascínio por tecnologia e criação.</p>
+            </div>
+        </div>
+        <div class="info__education">
+            <h2 class="info__title">Formação</h2>
+            <div class="info__description">
+                <p>Sou técnico em automação industrial pelo Instituto Federal, onde aprendi muito de robótica, elétrico, lógica e programação, me apaixonei pela área desde lá.</p>
+                <p>Estudo Ciência da Computação na PUCRS e descobri que essa é a área onde realmente me identifico.</p>
+            </div>
         </div>
     </section>
 
     <section class="projects">
         <h2 class="projects__title">Projetos</h2>
-        <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-            <!-- Slides -->
-                <div class="swiper-slide">
-                    <div class="projects__card">
-                        <img src="/static/images/project-portfolio.png" alt="" class="project-image">
-                        <div class="project-text">
-                            <h3 class="project-name">Portfolio</h3>
-                            <p class="project-description">This portfolio is made using a go back-end which used html templates and group up a list of project to here.</p>
-                            <div class="project-technologies">
-                                <img src="" alt="" class="technology-icon">
-                                <img src="" alt="" class="technology-icon">
-                                <img src="" alt="" class="technology-icon">
-                            </div>
+        <ul class="projects__list">
+            {{range .}}
+            <li class="project-card">
+                <div class="project-image-container">
+                    <img src="/static/images/project-portfolio.png" alt={{.Name}} class="project-image">
+                </div>
+                <div class="project-text">
+                    <h4 class="project-name">{{.Name}}</h4>
+                    <p class="project-summary">{{.Summary}}</p>
+                    <ul class="project-technologies">
+                        {{range .Technologies}}
+                        <li class="project-technologies__element">{{.}}</li>
+                        {{end}}
+                    </ul>
+                </div>
+                <div class="project-hover-card">
+                    <div class="project-hover-card__image-container">
+                        <img src="/static/images/project-portfolio.png" alt={{.Name}} class="project-hover-card__image">
+                    </div>
+                    <div class="project-hover-card__line"></div>
+                    <div class="project-hover-card__text">
+                        <h4 class="project-hover-card__name">{{.Name}}</h4>
+                        <p class="project-hover-card__description">{{.Description}}</p>
+                        <div class="project-hover-card__technologies">
+                            <h5 class="project-hover-card__technologies__title">Tecnologias Usadas:</h5>
+                            <ul class="project-hover-card__technologies__list">
+                                {{range .Technologies}}
+                                <li class="project-hover-card__technologies__list__element"><strong>{{.}}</strong></li>
+                                {{end}}
+                            </ul>
                         </div>
                     </div>
                 </div>
-
-                <div class="swiper-slide">
-                    <div class="projects__card">
-                        <img src="" alt="" class="project-image">
-                        <div class="project-text">
-                            <h3 class="project-name">Project Name</h3>
-                            <p class="project-description">Project description with detail of technologies and implementation.</p>
-                            <div class="project-technologies">
-                                <img src="" alt="" class="technology-icon">
-                                <img src="" alt="" class="technology-icon">
-                                <img src="" alt="" class="technology-icon">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="projects__card">
-                        <img src="" alt="" class="project-image">
-                        <div class="project-text">
-                            <h3 class="project-name">Project Name</h3>
-                            <p class="project-description">Project description with detail of technologies and implementation.</p>
-                            <div class="project-technologies">
-                                <img src="" alt="" class="technology-icon">
-                                <img src="" alt="" class="technology-icon">
-                                <img src="" alt="" class="technology-icon">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="swiper-slide">
-                    <div class="projects__card">
-                        <img src="" alt="" class="project-image">
-                        <div class="project-text">
-                            <h3 class="project-name">Project Name</h3>
-                            <p class="project-description">Project description with detail of technologies and implementation.</p>
-                            <div class="project-technologies">
-                                <img src="" alt="" class="technology-icon">
-                                <img src="" alt="" class="technology-icon">
-                                <img src="" alt="" class="technology-icon">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="projects__card">
-                        <img src="" alt="" class="project-image">
-                        <div class="project-text">
-                            <h3 class="project-name">Project Name</h3>
-                            <p class="project-description">Project description with detail of technologies and implementation.</p>
-                            <div class="project-technologies">
-                                <img src="" alt="" class="technology-icon">
-                                <img src="" alt="" class="technology-icon">
-                                <img src="" alt="" class="technology-icon">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        </div>
+            </li>
+            {{end}}
+        </ul>
     </section>
 
     <footer class="footer">
-        Desenvolvido por Robson Uszacki.
+        <div class="footer__contact">
+            <div class="footer__contact__links">
+                <a href="https://github.com/uBarao" class="footer__contact__links__icon">
+                    <img src="/static/images/icon-github-white.png" alt="Github Icon" class="footer__contact__links__image">
+                </a>
+                <a href="https://www.linkedin.com/in/robson-uszacki/" class="footer__contact__links__icon">
+                    <img src="/static/images/icon-linkedin-white.png" alt="Linkedin Icon" class="footer__contact__links__image">
+                </a>
+            </div>
+            <a href="" class="footer__contact__email">lopesuszacki@gmail.com</a>
+        </div>
+        <div class="footer__credits">
+            <div class="footer__credits__technologies">
+                <img src="/static/images/icon-html-5.png" alt="html icon" class="footer__credits__technologies__image">
+                <img src="/static/images/icon-css-3.png" alt="css icon" class="footer__credits__technologies__image">
+                <img src="/static/images/icon-golang.png" alt="golang icon" class="footer__credits__technologies__image">
+            </div>
+            <p class="footer__credits__text">Desenvolvido por Robson Uszacki.</p>
+        </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        const swiper = new Swiper('.swiper', {
-            spaceBetween: 50,
-            speed: 400,
-            slidesPerView: 3,
-            roundLengths: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev"
-            }
-        });
-    </script>
+    <script src="/static/js/followMouse.js"></script>
 </body>
 </html>

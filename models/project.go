@@ -1,8 +1,10 @@
 package models
 
 type Project struct {
-	Id          int
-	Name        string
-	Description string
-	Tecnologies string
+	Id           int
+	Name         string
+	Summary      string
+	Description  string
+	Technologies []string
+	Image        string
 }
