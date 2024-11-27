@@ -390,7 +390,8 @@ body {
     .footer__contact {
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column-reverse;
+        gap: 20px;
     }
 
     .footer__contact__links {
