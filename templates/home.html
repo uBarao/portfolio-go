@@ -47,7 +47,7 @@
         <h2 class="projects__title">Projetos</h2>
         <ul class="projects__list">
             {{range .}}
-            <li class="project-card">
+            <a class="project-card" href="{{.Url}}">
                 <div class="project-image-container">
                     <img src={{.Image}} alt={{.Name}} class="project-image">
                 </div>
@@ -78,7 +78,7 @@
                         </div>
                     </div>
                 </div>
-            </li>
+            </a>
             {{end}}
         </ul>
     </section>

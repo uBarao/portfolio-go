@@ -7,4 +7,5 @@ type Project struct {
 	Description  string
 	Technologies []string
 	Image        string
+	Url          string
 }
