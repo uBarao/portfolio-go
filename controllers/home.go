@@ -19,11 +19,11 @@ func Home(w http.ResponseWriter, r *http.Request) {
 			Url:          "https://github.com/uBarao/portfolio-go",
 		},
 		{
-			Name:         "Sistema de Sorteio",
+			Name:         "Sistema de Sorteios",
 			Summary:      "Um sistema que cria, registra e realiza sorteios.",
-			Description:  "Usando todas as possibilidades de Go, eu criei o projeto que cria, recebe, exibe e realiza sorteios, além de transformar em uma API Rest.",
-			Technologies: []string{"Golang"},
-			Image:        "",
+			Description:  "Usando todas as possibilidades de Go, eu criei o projeto que cria, recebe, exibe e realiza sorteios, além de transformar em uma API Rest. Após isso, criei a interface de Front-End que registra novas apostas.",
+			Technologies: []string{"Golang", "HTML", "CSS"},
+			Image:        "/static/images/project-raffle-system.png",
 			Url:          "https://github.com/uBarao/raffle_system",
 		},
 	}
